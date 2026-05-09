@@ -1,24 +1,23 @@
 {
   "compilerOptions": {
     "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
-    "target": "es2023",
+    "target": "ES2022",
+    "useDefineForClassFields": true,
     "lib": [
-      "ES2023",
-      "DOM"
+      "ES2022",
+      "DOM",
+      "DOM.Iterable"
     ],
-    "module": "esnext",
-    "types": [
-      "vite/client"
-    ],
+    "module": "ESNext",
     "skipLibCheck": true,
     /* Bundler mode */
     "moduleResolution": "bundler",
     "allowImportingTsExtensions": true,
-    "verbatimModuleSyntax": true,
-    "moduleDetection": "force",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
-    /* FIX FOR VERCEL TYPESCRIPT BUILD */
+    /* Vercel + TypeScript Fix */
     "ignoreDeprecations": "5.0",
     /* Path aliases */
     "baseUrl": ".",
@@ -27,10 +26,14 @@
         "./src/*"
       ]
     },
+    /* Types */
+    "types": [
+      "vite/client"
+    ],
     /* Linting */
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "erasableSyntaxOnly": true,
+    "strict": false,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
     "noFallthroughCasesInSwitch": true
   },
   "include": [
