@@ -9,7 +9,10 @@
       "DOM.Iterable"
     ],
     "module": "ESNext",
+    /* IMPORTANT FIXES */
     "skipLibCheck": true,
+    "strict": false,
+    "noImplicitAny": false,
     /* Bundler mode */
     "moduleResolution": "bundler",
     "allowImportingTsExtensions": true,
@@ -30,7 +33,6 @@
       "vite/client"
     ],
     /* Linting */
-    "strict": false,
     "noUnusedLocals": false,
     "noUnusedParameters": false,
     "noFallthroughCasesInSwitch": true
