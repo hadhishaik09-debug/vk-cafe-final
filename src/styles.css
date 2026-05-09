@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600;700&family=Cormorant+Garamond:wght@400;500;600;700&display=swap');
 
 :root {
   --radius: 1rem;
@@ -44,11 +45,21 @@
   --border: oklch(0.28 0.025 55 / 10%);
   --input: oklch(0.28 0.025 55 / 12%);
   --ring: oklch(0.78 0.075 78);
+  --font-serif: "Cormorant Garamond", "Playfair Display", serif;
+  --font-display: "Playfair Display", serif;
+  --font-sans: "Inter", "Helvetica Neue", sans-serif;
+
+  --shadow-soft:
+    0 30px 80px -40px rgba(0, 0, 0, 0.18),
+    0 8px 24px -16px rgba(0, 0, 0, 0.12);
+
+  --shadow-glow:
+    0 0 80px -20px rgba(201, 164, 106, 0.45);
 }
 
 @layer base {
   * {
-    border-color: var(--color-border);
+    border-color: var(--border);
   }
 
   html {
@@ -58,7 +69,7 @@
   body {
     background: linear-gradient(180deg, #F8F4EF 0%, #FFFFFF 55%, #F8F4EF 100%);
     background-attachment: fixed;
-    color: var(--color-foreground);
+    color: var(--foreground);
     font-family: var(--font-sans);
     font-weight: 300;
     -webkit-font-smoothing: antialiased;
